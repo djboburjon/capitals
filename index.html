@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="modal">
+    <h1>LOADING...</h1>
+  </div>
+  <nav>
+    <div class="container">
+      <div class="nav">
+        <h1>Where in the world?</h1>
+        <div class="mode"><img src="./imgs/moon.png" alt="Dark Mode">Dark Mode</div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <form>
+        <label>
+          <img src="./imgs/search.png" alt="Search icon">
+          <input class="searchState" type="text" placeholder="Search for a country...">
+        </label>
+        <select class="regionFilter">
+          <option value="all">All</option>
+          <option value="africa">Africa</option>
+          <option value="america">America</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europe</option>
+          <option value="oceania">Oceania</option>
+        </select>
+      </form>
+
+      <div class="cards">
+        <div class="card">
+          <img src="./imgs/usa.png" alt="">
+          <div>
+            <div class="name">USA</div>
+            <p>Population: <span class="population">234,524</span></p>
+            <p>Region <span class="region">America</span></p>
+            <p>Capital <span class="capital">Washington</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="./js/main.js"></script>
+</html>

@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(221, 217, 217);
+}
+
+body.active {
+  background-color: #202C36;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000e8;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+nav {
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
+body.active nav {
+  background: #2B3844;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 80px;
+}
+body.active .nav {
+  color: white;
+}
+
+.mode {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px;
+}
+
+form label {
+  padding: 18px 32px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+body.active form label {
+  background: #2B3844;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+}
+
+.searchState {
+  border: none;
+  outline: none;
+}
+
+body.active .searchState{
+  color: white;
+  background-color: #2B3844;
+}
+
+body.active .searchState::placeholder {
+  color: white;
+}
+
+.regionFilter {
+  padding: 18px 24px;
+  width: 200px;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+}
+
+body.active .regionFilter {
+  background: #2B3844;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  color: white;
+}
+
+.cards {
+  padding: 0px 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  margin-bottom: 70px;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #FFF;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+body.active .card {
+  background: #2B3844;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+}
+
+.card > div {
+  padding: 24px 24px 46px 24px;
+}
+
+
+.card .name {
+  margin-bottom: 16px;
+  color: #111517;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.card p {
+  margin-bottom: 8px;
+  color: #111517;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+body.active .card .name,
+body.active .card p,
+body.active .card span {
+  color: white;
+}
+
+.card p span {
+  color: #111517;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.hidden {
+  display: none;
+}
