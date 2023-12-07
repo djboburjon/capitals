@@ -1,11 +1,10 @@
-var api_link = `https://restcountries.com/v3.1/name/${country}`;
 const dak_mode = document.querySelector(".dak_mode")
 const dak_mode2 = document.querySelector(".dak_mode2")
 const section = document.querySelector(".section")
 const body = document.querySelector("body")
 
-
 const country = new URLSearchParams(window.location.search).get("name")
+var api_link = `https://restcountries.com/v3.1/name/${country}`;
 
 
 
