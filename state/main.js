@@ -7,25 +7,29 @@ const country = new URLSearchParams(window.location.search).get("name")
 var api_link = `https://restcountries.com/v3.1/name/${country}`;
 
 
-
 const getData = async (link) => {
   
   const req = await fetch(link);
   const data = await req.json();
-
-  writeCountry(data[0])
+  
+  var id = 0;
+  if(data.length == 2) {
+      id = 1;
+  }
+  writeCountry(data[id])
 
 };
 
 getData(api_link)
 
+
 dak_mode.addEventListener("click", () => {
     body.classList.add("active");
     dak_mode2.style = "display: flex;";
     dak_mode.style = "display: none;";
-  });
-  
-  dak_mode2.addEventListener("click", () => {
+});
+
+dak_mode2.addEventListener("click", () => {
     body.classList.remove("active");
     dak_mode2.style = "display: none;";
     dak_mode.style = "display: flex;";
@@ -39,7 +43,7 @@ dak_mode.addEventListener("click", () => {
                     <img src="${data.flags.png}" alt="">
                 </div>
                 <div class="content">
-                    <h1 class="name">${data.name.common}</h1>
+                <h1 class="name">${data.name.common}</h1>
                     <div class="about_country">
                        <div class="left">
                        <p>
@@ -77,7 +81,7 @@ dak_mode.addEventListener("click", () => {
                     </p>
                 </div>
             </div>
-        `
+            `
 
 }
 
